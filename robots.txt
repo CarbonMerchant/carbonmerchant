@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carbonmerchant.ca/sitemap.xml
