@@ -226,6 +226,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 .how-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:start;margin-top:8px}
 .how-grid .sec-lede{margin-top:0}
 @media(max-width:900px){.how-grid{grid-template-columns:1fr;gap:34px}}
+@media(max-width:920px){.nav-links .has-sub .sub{display:none;position:static;box-shadow:none;padding-left:18px}.nav-links .has-sub.open .sub{display:block}}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Carbon Merchant","alternateName":"Carbon Merchant Environmental Commodities","url":"https://carbonmerchant.ca","logo":"https://carbonmerchant.ca/og-image.png","description":"Environmental commodities advisory and marketing firm. Agency execution and advisory across Canadian compliance carbon markets and global voluntary markets.","founder":{"@type":"Person","name":"Ana Avramovic","jobTitle":"Founder","sameAs":"https://www.linkedin.com/in/anaavramovic"},"address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"email":"hello@carbonmerchant.ca","areaServed":["Canada","Global"],"knowsAbout":["Alberta TIER","BC OBPS","Federal OBPS","Clean Fuel Regulations","BC LCFS","Voluntary Carbon Markets","CORSIA","Article 6"]}
 </script>
@@ -254,8 +255,9 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 </div></section>
 <section class="window"><div class="wrap">
 <div class="sec-eyebrow reveal">How It Works</div>
-<h2 class="reveal">Facilitated, not handed off.</h2>
-<div class="how-grid"><p class="sec-lede reveal">You bring the mandate to Carbon Merchant. We qualify it, match it to the right partner, and stay close through the engagement. Your contract is with the partner; the introduction, the fit, and the standard are ours. And every adjacent mandate is screened for the environmental commodity exposure that usually comes with it.</p><div class="reveal"><svg viewBox="0 0 360 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:360px">
+<div class="how-grid"><div><h2 class="reveal">Facilitated, not handed off.</h2><p class="sec-lede reveal">You bring the mandate to Carbon Merchant. We qualify it, match it to the right partner, and stay close through the engagement. Your contract is with the partner; the introduction, the fit, and the standard are ours. And every adjacent mandate is screened for the environmental commodity exposure that usually comes with it.</p>
+<div class="flow-cta reveal" style="margin-top:30px"><span>Have an energy mandate?</span><a href="contact.html">Start the conversation</a></div></div>
+<div class="reveal"><svg viewBox="0 0 360 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:360px">
 <rect x="20" y="10" width="320" height="74" fill="#1F2A78"/>
 <text x="180" y="41" text-anchor="middle" font-family="Sora,sans-serif" font-weight="600" font-size="17" fill="#F5F2F4">Your mandate</text>
 <text x="180" y="64" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="2" fill="#00C2B2">ENERGY · INFRASTRUCTURE</text>
@@ -271,7 +273,6 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 <text x="180" y="280" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="2" fill="#00C2B2">YOUR CONTRACT · THEIR DELIVERY</text>
 <text x="180" y="322" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="2" fill="#5F6478">ONE COMMERCIAL STANDARD</text>
 </svg></div></div>
-<div class="flow-cta reveal" style="margin-top:38px"><span>Have an energy mandate?</span><a href="contact.html">Start the conversation</a></div>
 </div></section>
 </main>
 <footer><div class="wrap">
@@ -288,7 +289,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 </div></footer>
 <script>
 function toggleMenu(btn){const l=document.getElementById('navlinks');const o=l.classList.toggle('open');btn.setAttribute('aria-expanded',o);}
-document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open');const b=document.querySelector('.menu-btn');if(b)b.setAttribute('aria-expanded','false');}));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',function(e){const mb=document.querySelector('.menu-btn');const mobile=mb&&getComputedStyle(mb).display!=='none';if(mobile&&this.classList.contains('nav-parent')){e.preventDefault();this.parentElement.classList.toggle('open');return;}document.getElementById('navlinks').classList.remove('open');if(mb)mb.setAttribute('aria-expanded','false');}));
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));

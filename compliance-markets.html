@@ -213,6 +213,19 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 .include li{list-style:none;padding:12px 0;border-top:1px solid var(--line);font-size:.92rem;font-weight:300;color:rgba(28,28,46,.8);display:flex;gap:14px}
 .include li::before{content:"→";color:var(--teal-deep);font-weight:600}
 
+@media(max-width:920px){.nav-links .has-sub .sub{display:none;position:static;box-shadow:none;padding-left:18px}.nav-links .has-sub.open .sub{display:block}}
+.stages{margin-top:32px;max-width:780px}
+.stage{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 20px;border-left:4px solid var(--line);border-bottom:1px solid var(--line)}
+.stage:first-child{border-top:1px solid var(--line)}
+.stage .s-name{font-weight:600;font-size:.95rem;color:var(--navy)}
+.stage .s-tag{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.12em;color:var(--teal);text-align:right;white-space:nowrap}
+.stage.dim .s-name{color:rgba(28,28,46,.4);font-weight:400}
+.stage.adv{border-left-color:var(--peri);background:#fff}
+.stage.adv .s-tag{color:var(--peri)}
+.stage.win{border-left-color:var(--teal);background:#fff}
+.stage{padding:13px 14px}
+.stage .s-name{font-size:.88rem}
+.stage .s-tag{font-size:.58rem}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Carbon Merchant","alternateName":"Carbon Merchant Environmental Commodities","url":"https://carbonmerchant.ca","logo":"https://carbonmerchant.ca/og-image.png","description":"Environmental commodities advisory and marketing firm. Agency execution and advisory across Canadian compliance carbon markets and global voluntary markets.","founder":{"@type":"Person","name":"Ana Avramovic","jobTitle":"Founder","sameAs":"https://www.linkedin.com/in/anaavramovic"},"address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"email":"hello@carbonmerchant.ca","areaServed":["Canada","Global"],"knowsAbout":["Alberta TIER","BC OBPS","Federal OBPS","Clean Fuel Regulations","BC LCFS","Voluntary Carbon Markets","CORSIA","Article 6"]}
 </script>
@@ -248,22 +261,37 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 <div class="step reveal"><div class="num">03</div><h3>Market execution</h3><p>We originate, negotiate, and price with our name facing the market. Yours stays out of it.</p></div>
 <div class="step reveal"><div class="num">04</div><h3>Confirmation &amp; settlement</h3><p>You contract directly with your chosen counterparty; we support through registry and settlement.</p></div>
 </div></div></section>
-<div class="principle"><div class="wrap reveal">
-<span class="mono">Discretion Is the Product</span>
-<p>Through price discovery and negotiation, the market sees Carbon Merchant — not you. Your name is disclosed only at confirmation, to the one counterparty you've chosen to contract with. Everyone you didn't trade with never learns you were in the market.</p>
-<small>We engage where commercial outcomes are decided — post-FID, at validation, at issuance, and post-issuance — and we execute quietly. No client is named, referenced, or implied in our marketing, our conversations, or our content. Ever.</small>
-</div></div>
+<section class="window"><div class="wrap">
+<div class="sec-eyebrow reveal">Where We Engage</div>
+<h2 class="reveal">We engage where commercial outcomes are decided.</h2>
+<p class="sec-lede reveal">Post-FID, at validation, at issuance, and post-issuance — issued credits, spot sales, and term offtakes are as much our mandate as first monetization. We don't sell feasibility studies — we sell execution.</p>
+<div class="stages reveal">
+<div class="stage dim"><span class="s-name">Concept</span><span class="s-tag">REFERRAL TO TRUSTED PARTNERS</span></div>
+<div class="stage dim"><span class="s-name">Feasibility</span><span class="s-tag">REFERRAL TO TRUSTED PARTNERS</span></div>
+<div class="stage win"><span class="s-name">Post-FID — Advisory &amp; Early Offtake Marketing</span><span class="s-tag">PRIMARY WINDOW</span></div>
+<div class="stage win"><span class="s-name">Validation / Issuance — Offtakes &amp; Pre-Purchases</span><span class="s-tag">PRIMARY WINDOW</span></div>
+<div class="stage win"><span class="s-name">Post-Issuance — Spot &amp; Offtakes</span><span class="s-tag">PRIMARY WINDOW</span></div>
+</div></div></section>
+<section><div class="wrap">
+<div class="sec-eyebrow reveal">Specialist Partners</div>
+<h2 class="reveal">Carbon intensity and verification, covered.</h2>
+<p class="sec-lede reveal">For CFR and BC LCFS work that turns on the numbers, we collaborate with trusted specialist partners: carbon intensity modelling, LCA development, application support, and third-party verification. You get the technical file done right, and a commercial desk already positioned to market the credits it produces.</p>
+</div></section>
 <section class="contact-sec"><div class="wrap">
 <div class="sec-eyebrow reveal">Next Step</div>
 <h2 class="reveal">Bring us the position.<br>We'll bring the market.</h2>
 <p class="reveal">Every conversation is confidential from the first message — before any agreement is signed.</p>
 <a class="btn btn-solid reveal" href="contact.html">Book a Working Session</a>
 </div></section>
-<section><div class="wrap">
-<div class="sec-eyebrow reveal">Specialist Partners</div>
-<h2 class="reveal">Carbon intensity and verification, covered.</h2>
-<p class="sec-lede reveal">For CFR and BC LCFS work that turns on the numbers, we collaborate with trusted specialist partners: carbon intensity modelling, LCA development, application support, and third-party verification. You get the technical file done right, and a commercial desk already positioned to market the credits it produces.</p>
-</div></section>
+
+<div class="principle"><div class="wrap reveal">
+<span class="mono">Discretion Is the Product</span>
+<p>Through price discovery and negotiation, the market sees Carbon Merchant — not you. Your name is disclosed only at confirmation, to the one counterparty you've chosen to contract with. Everyone you didn't trade with never learns you were in the market.</p>
+<small>We engage where commercial outcomes are decided — post-FID, at validation, at issuance, and post-issuance — and we execute quietly. No client is named, referenced, or implied in our marketing, our conversations, or our content. Ever.</small>
+</div></div>
+
+
+
 
 </main>
 <footer><div class="wrap">
@@ -280,7 +308,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 </div></footer>
 <script>
 function toggleMenu(btn){const l=document.getElementById('navlinks');const o=l.classList.toggle('open');btn.setAttribute('aria-expanded',o);}
-document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open');const b=document.querySelector('.menu-btn');if(b)b.setAttribute('aria-expanded','false');}));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',function(e){const mb=document.querySelector('.menu-btn');const mobile=mb&&getComputedStyle(mb).display!=='none';if(mobile&&this.classList.contains('nav-parent')){e.preventDefault();this.parentElement.classList.toggle('open');return;}document.getElementById('navlinks').classList.remove('open');if(mb)mb.setAttribute('aria-expanded','false');}));
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));

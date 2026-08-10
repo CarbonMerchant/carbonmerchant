@@ -213,6 +213,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 .include li{list-style:none;padding:12px 0;border-top:1px solid var(--line);font-size:.92rem;font-weight:300;color:rgba(28,28,46,.8);display:flex;gap:14px}
 .include li::before{content:"→";color:var(--teal-deep);font-weight:600}
 
+@media(max-width:920px){.nav-links .has-sub .sub{display:none;position:static;box-shadow:none;padding-left:18px}.nav-links .has-sub.open .sub{display:block}}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Carbon Merchant","alternateName":"Carbon Merchant Environmental Commodities","url":"https://carbonmerchant.ca","logo":"https://carbonmerchant.ca/og-image.png","description":"Environmental commodities advisory and marketing firm. Agency execution and advisory across Canadian compliance carbon markets and global voluntary markets.","founder":{"@type":"Person","name":"Ana Avramovic","jobTitle":"Founder","sameAs":"https://www.linkedin.com/in/anaavramovic"},"address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"email":"hello@carbonmerchant.ca","areaServed":["Canada","Global"],"knowsAbout":["Alberta TIER","BC OBPS","Federal OBPS","Clean Fuel Regulations","BC LCFS","Voluntary Carbon Markets","CORSIA","Article 6"]}
 </script>
@@ -251,7 +252,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 </div></footer>
 <script>
 function toggleMenu(btn){const l=document.getElementById('navlinks');const o=l.classList.toggle('open');btn.setAttribute('aria-expanded',o);}
-document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open');const b=document.querySelector('.menu-btn');if(b)b.setAttribute('aria-expanded','false');}));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',function(e){const mb=document.querySelector('.menu-btn');const mobile=mb&&getComputedStyle(mb).display!=='none';if(mobile&&this.classList.contains('nav-parent')){e.preventDefault();this.parentElement.classList.toggle('open');return;}document.getElementById('navlinks').classList.remove('open');if(mb)mb.setAttribute('aria-expanded','false');}));
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
