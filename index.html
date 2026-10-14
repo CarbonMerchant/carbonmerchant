@@ -47,8 +47,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(31,42,120,.95
   .nav-links a.active{border-bottom:none;color:var(--teal)}
   .nav-cta{margin:10px 28px 0;width:auto;text-align:center}
 .has-sub{width:100%}
-.nav-parent{display:block;padding:14px 28px;color:rgba(245,242,244,.55)!important;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
-.nav-parent .caret{display:none}
+.nav-parent{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;color:rgba(245,242,244,.75)!important;font-size:.8rem;letter-spacing:.03em;text-transform:none;pointer-events:auto;cursor:pointer}
+.nav-parent .caret{display:inline-block;font-size:.8em;opacity:.85;transition:transform .2s}
+.has-sub.open>.nav-parent{color:var(--teal)!important}
+.has-sub.open>.nav-parent .caret{transform:rotate(180deg)}
 .sub{position:static;opacity:1;visibility:visible;border:none;background:transparent;min-width:0;padding:0}
 .sub a{padding:12px 44px}
   .menu-btn{display:block}
@@ -228,7 +230,7 @@ footer{background:var(--navy);color:rgba(245,242,244,.6);padding:44px 0 36px;bor
 .flow-cta span{font-family:'Sora',sans-serif;font-weight:600;font-size:1.35rem;color:#1F2A78}
 .flow-cta a{display:inline-block;background:#00C2B2;color:#1C1C2E;font-weight:600;padding:14px 26px;text-decoration:none;font-size:1rem}
 .flow-cta a:hover{background:#0A7A70;color:#F5F2F4}
-@media(max-width:920px){.nav-links .has-sub .sub{display:none;position:static;box-shadow:none;padding-left:18px}.nav-links .has-sub.open .sub{display:block}}
+@media(max-width:920px){.nav-links .has-sub .sub{display:none;position:static;box-shadow:none;padding-left:18px;opacity:1;visibility:visible}.nav-links a{-webkit-tap-highlight-color:transparent}.nav-parent:focus,.nav-parent:focus-visible{outline:none;background:transparent}.nav-links .has-sub.open .sub{display:block}}
 .bcx-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:72px;align-items:center}
 @media(max-width:920px){.bcx-grid{grid-template-columns:1fr;gap:40px}.bcx-grid img{max-width:200px}}
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Carbon Merchant","slogan":"Commercial infrastructure for environmental commodities.","description":"Specialist environmental commodities advisory and marketing firm covering Alberta TIER, BC OBPS, the federal Clean Fuel Regulations, BC LCFS, and the global voluntary carbon market.","areaServed":"CA","founder":{"@type":"Person","name":"Ana Avramovic"},"email":"hello@carbonmerchant.ca","url":"https://carbonmerchant.ca"}</script>
